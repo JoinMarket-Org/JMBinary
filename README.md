@@ -1,6 +1,8 @@
 # JMBinary
 
 Binary distributions of Joinmarket. This is a work in progress.
+The source is from the Joinmarket branch [here](https://github.com/AdamISZ/joinmarket/tree/gui), 
+currently based off [Joinmarket](https://github.com/joinmarket-org/joinmarket) release 0.1.2.
 
 ## GUI joinmarket app (for sendpayment only at the moment)
 
