@@ -131,8 +131,8 @@ You'll see that 3 (or whatever number you chose) counterparties have been select
 selection is partly random and partly favouring fees as low as possible. The percentage 
 fee is shown: in this case, it's 0.546% of 0.01, i.e. 5460 satoshis. Yes, Joinmarket is 
 usually very cheap :) For small amounts like this 0.01btc example, the coinjoin fee is 
-actually much lower than the bitcoin transaction fee, although that might not be so true 
-for larger joins.
+actually much lower than the bitcoin transaction fee. For larger amounts you'll usually 
+find the percentage fee is lower (less than 0.1% is not uncommon).
 
 If you don't like the fee, click No and the transaction is just aborted. If you click Yes, 
 you are now committed to the transaction. (Sorry but the "Abort" button is non functional 
