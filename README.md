@@ -11,11 +11,7 @@ currently based off [release 0.1.2](https://github.com/joinmarket-org/joinmarket
 
 Bugs/nits/intended improvements list [here](#todo-list)
 
-Executables can be found under:
-
-* windows/joinmarket-qt.exe
-* ubuntu64/joinmarket-qt
-* debian32/joinmarket-qt
+**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v2-0.1.2)** to download the latest release.
 
 No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
