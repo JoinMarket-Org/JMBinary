@@ -1,28 +1,39 @@
 # JMBinary
 
-Binary distributions of Joinmarket. This is a work in progress.
-The source is from the Joinmarket branch [here](https://github.com/AdamISZ/joinmarket/tree/gui), 
-currently based off [Joinmarket](https://github.com/joinmarket-org/joinmarket) release 0.1.2.
+Binary distributions of Joinmarket.
+
+## GUI app JoinmarketQt (for sendpayment only at the moment)
+
+The source is from the Joinmarket [`gui branch`](https://github.com/Joinmarket-Org/joinmarket/tree/gui), 
+currently based off [release 0.1.2](https://github.com/joinmarket-org/joinmarket/releases).
+
+**LATEST VERSION of JoinMarketQt is version 2**. This includes some minor updates, the most important of which is adding sweep transactions.
 
 Bugs/nits/intended improvements list [here](#todo-list)
 
-## GUI joinmarket app (for sendpayment only at the moment)
-
 Executables can be found under:
 
-* windows/joinmarket.exe
-* ubuntu64/joinmarket-gui
-* debian32/joinmarket-gui
+* windows/joinmarket-qt.exe
+* ubuntu64/joinmarket-qt
+* debian32/joinmarket-qt
 
-No other files / setup should be needed.
+No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
-For TAILS: use debian32 version, and run the executable with `torify joinmarket-gui`. You can set the irc onion host in the settings tab.
+For TAILS: use debian32 version, and run the executable with `torify joinmarket-qt`. You can set the irc onion host in the settings tab.
 
-The github commit of these executables has been signed.
+The github commit of these executables has been signed. There are also .asc gpg signatures in each subdirectory.
+
+My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ on twitter): 
+
+    4668 9728 A9F6 4B39 1FA8  71B7 B3AE 09F1 E9A3 197A
+
+The gpg signature files for each binary should verify against the above key.
+
+**You can also use the [python source version](https://github.com/Joinmarket-Org/joinmarket/tree/gui)** ; just run `python joinmarket-qt.py`. However, this of course requires the same installation/dependencies as the console app.
 
 ##Walkthrough
 
-Double click the binary to run it (or, if on TAILS, do `torify joinmarket-gui`).
+Double click the binary to run it (or, if on TAILS, do `torify joinmarket-qt`).
 You will be presented with this start screen:
 
 ![](/images/jm_start.png)
@@ -155,11 +166,9 @@ Enjoy doing coinjoins :)
 
 ##TODO list
 
-1. Add joinmarket alerts and Core alerts to the GUI
-2. Show an error message if recovery words are wrong, instead of silent quit.
-3. Add an icon for the GUI
-4. (Under discussion) change to a reusable donation address instead of a static one?
-5. Add sweeps.
+1. Add an icon for the GUI
+2. Export of private keys (and *possibly* import)
+3. (Under discussion) change to a reusable donation address instead of a static one? 
 
 
 
