@@ -5,13 +5,13 @@ Binary distributions of Joinmarket.
 ## GUI app JoinmarketQt (for sendpayment only at the moment)
 
 The source is from the Joinmarket [`gui branch`](https://github.com/Joinmarket-Org/joinmarket/tree/gui), 
-currently based off [release 0.1.2](https://github.com/joinmarket-org/joinmarket/releases).
+currently based off [release 0.1.3](https://github.com/joinmarket-org/joinmarket/releases).
 
-**LATEST VERSION of JoinMarketQt is version 2**. This includes some minor updates, the most important of which is adding sweep transactions.
+**LATEST VERSION of JoinMarketQt is version 3**. This includes a **critical security update**; do not use earlier versions, they are no longer considered safe. If you do, you will be shown a large red warning! Also, the wallet is always freshly synced before doing a spend, to avoid the user accidentally trying to spend stale coins.
 
 Bugs/nits/intended improvements list [here](#todo-list)
 
-**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v2-0.1.2)** to download the latest release.
+**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v3-0.1.3)** to download the latest release.
 
 No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
