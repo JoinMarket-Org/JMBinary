@@ -163,6 +163,7 @@ Enjoy doing coinjoins :)
 ##TODO list
 
 1. Add an icon for the GUI
+2. Make extra bold warnings on backing up seed phrase.
 2. Add the -P pick option (will take some work, but important)
 3. Fix crash on using unconfigured Core instance
 4. Constrain settings entries with dropdowns
