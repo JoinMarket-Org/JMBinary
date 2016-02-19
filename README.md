@@ -163,8 +163,12 @@ Enjoy doing coinjoins :)
 ##TODO list
 
 1. Add an icon for the GUI
-2. Export of private keys (and *possibly* import)
-3. (Under discussion) change to a reusable donation address instead of a static one? 
+2. Add the -P pick option (will take some work, but important)
+3. Fix crash on using unconfigured Core instance
+4. Constrain settings entries with dropdowns
+5. Refactor sendpayment.py for upstream compatibility (separate thread from 'PT' object etc.)
+6. Export of private keys (and *possibly* import)
+7. (Under discussion) change to a reusable donation address instead of a static one? 
 
 
 
