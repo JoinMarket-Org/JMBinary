@@ -97,7 +97,7 @@ to time.
 If you're using TAILS, the other thing you can change is the value of `host` in messaging,
 to the onion for the IRC server.
 
-Another possible setting that people might want to change is `tx_fees` under `Messaging`. 
+Another possible setting that people might want to change is `tx_fees` under `POLICY`. 
 Hover over the setting for the tooltip explanation; in brief, leave it as default unless 
 it's really important to you to get fast confirmation, in which case change it from 3 to 1.
 
