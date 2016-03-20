@@ -15,7 +15,7 @@ Bugs/nits/intended improvements list [here](#todo-list)
 
 No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
-For TAILS: use debian32 version, and run the executable with `torify joinmarket-qt`. You can set the irc onion host in the settings tab.
+For TAILS: use debian32 version, and run the executable with `torify ./joinmarket-qt-debian32`. You can set the irc onion host in the settings tab.
 
 The github commit of these executables has been signed. There are also .asc gpg signatures in each subdirectory.
 
