@@ -5,19 +5,19 @@ Binary distributions of Joinmarket.
 ## GUI app JoinmarketQt (for sendpayment only at the moment)
 
 The source is from the Joinmarket [`gui branch`](https://github.com/Joinmarket-Org/joinmarket/tree/gui), 
-currently based off [release 0.1.3](https://github.com/joinmarket-org/joinmarket/releases).
+currently based off [release 0.1.4](https://github.com/joinmarket-org/joinmarket/releases).
 
-**LATEST VERSION of JoinMarketQt is version 3**. This includes a **critical security update**; do not use earlier versions, they are no longer considered safe. If you do, you will be shown a large red warning! Also, the wallet is always freshly synced before doing a spend, to avoid the user accidentally trying to spend stale coins.
+**LATEST VERSION of JoinMarketQt is version 4**.
 
-Bugs/nits/intended improvements list [here](#todo-list)
+Bugs/nits/intended improvements list is maintained [here](#todo-list)
 
-**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v3-0.1.3)** to download the latest release.
+**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v4-0.1.4)** to download the latest release.
 
 No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
 For TAILS: use debian32 version, and run the executable with `torify ./joinmarket-qt-debian32`. You can set the irc onion host in the settings tab.
 
-The github commit of these executables has been signed. There are also .asc gpg signatures in each subdirectory.
+The github commits to the main repo, above, are signed. For the executables in the release, there are .asc gpg signatures provided; please check them!
 
 My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ on twitter): 
 
@@ -26,6 +26,21 @@ My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ 
 The gpg signature files for each binary should verify against the above key.
 
 **You can also use the [python source version](https://github.com/Joinmarket-Org/joinmarket/tree/gui)** ; just run `python joinmarket-qt.py`. However, this of course requires the same installation/dependencies as the console app.
+
+**Contents**
+
+* [Walkthrough](#walkthrough) - for starting out.
+
+* Other features
+
+ * [Sweeps](#sweeps)
+ 
+ * [Exporting private keys](#export)
+
+ * [The settings tab](#settings)
+
+ * [The txhistory tab](#history)
+
 
 ##Walkthrough
 
@@ -160,15 +175,47 @@ You can refer to the previous transactions you've done in the Tx History tab:
 
 Enjoy doing coinjoins :)
 
+##Sweeps
+
+If you want to send *all* the coins in a specific mixdepth at once, the correct way to do it
+is using the "sweep" feature. To do this, simply set the "Amount" field in the SendPayment tab to zero. The program
+will automatically figure out the right output amount after accounting for the coinjoin and bitcoin transaction fees. If you try to send
+total amount, you will get a "not enough funds" error. Putting it another way, you'll end up with dust in the wallet if you try
+to send the total without using this sweep feature, so do use it.
+
+##Export
+
+A new feature in version 4: In the wallet menu, choose "Export keys" and you will be
+shown a list of all the private keys for addresses that currently cointain coins.
+**DON'T USE THIS FEATURE UNLESS YOU REALLY NEED TO**, and be careful. Handling private
+keys is not advisable, even for the experienced Bitcoin user. Disclosing even one BIP32
+private key in your wallet can theoretically expose the whole wallet, also.
+The keys displayed can be saved to a file if you wish (again, be very careful),
+or you can copy-paste them elsewhere. They are in WIF compressed format (start with
+K or L on mainnet).
+
+##Settings
+
+The settings tab shows all the configuration variables that you can change for Joinmarket.
+These settings are stored between runs in a file `joinmarket.cfg`. Hovering your mouse
+over most of these will show a brief description of their purpose. A later version of this
+doc may give more details about settings that can be changed. In most cases just about the
+only ones you might want to change are `blockchain_source` and `tx_fees` (possibly).
+
+##History
+
+The history tab is probably self-explanatory; note that the transaction details shown
+are stored in a text file `jm-tx-history.txt` which you can of course delete whenever you
+choose. There are no labels or similar transaction history interface - this is not a
+full featured wallet.
+
 ##TODO list
 
 1. Add an icon for the GUI
-2. Make extra bold warnings on backing up seed phrase.
 2. Add the -P pick option (will take some work, but important)
-3. Fix crash on using unconfigured Core instance
 4. Constrain settings entries with dropdowns
+6. Add a direct send from 1 mixdepth (currently can only extract coins via private key export if JM pit is down)
 5. Refactor sendpayment.py for upstream compatibility (separate thread from 'PT' object etc.)
-6. Export of private keys (and *possibly* import)
 7. (Under discussion) change to a reusable donation address instead of a static one? 
 
 
