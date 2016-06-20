@@ -17,9 +17,13 @@ No other files / setup should be needed. You might need to `chmod 755` on Linux.
 
 For TAILS: use debian32 version, and run the executable with `torify ./joinmarket-qt-debian32`. You can set the irc onion host in the settings tab.
 
+For WINDOWS: If on startup you get an error message about a missing dll, you need to install the Visual C++ 2013 runtime dependency.
+ Do so by going to www.microsoft.com/en-us/download/details.aspx?id=40784 and clicking Download.
+Choose x86.
+
 The github commits to the main repo, above, are signed. For the executables in the release, there are .asc gpg signatures provided; please check them!
 
-My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ on twitter): 
+My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ on twitter) is in the `pubkeys/` directory, and has this fingerprint:
 
     4668 9728 A9F6 4B39 1FA8  71B7 B3AE 09F1 E9A3 197A
 
