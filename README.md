@@ -2,7 +2,7 @@
 
 Binary distributions of Joinmarket.
 
-## GUI app JoinmarketQt (for sendpayment only at the moment)
+## GUI app JoinmarketQt (for "sendpayment" only at the moment)
 
 The source is from the Joinmarket [`gui branch`](https://github.com/Joinmarket-Org/joinmarket/tree/gui), 
 currently based off [release 0.1.4](https://github.com/joinmarket-org/joinmarket/releases).
@@ -11,15 +11,18 @@ currently based off [release 0.1.4](https://github.com/joinmarket-org/joinmarket
 
 Bugs/nits/intended improvements list is maintained [here](#todo-list)
 
-**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/tag/v4-0.1.4)** to download the latest release.
+**[CLICK HERE](https://github.com/JoinMarket-Org/JMBinary/releases/latest)** to download the latest release.
 
-No other files / setup should be needed. You might need to `chmod 755` on Linux.
+**WINDOWS:**<br>
+Get the .exe and .exe.asc files from the above link. After downloading those, it is optional but recommended to verify the download's integrity (Link: [How to verify the download integrity on windows](verify_file_signature/VERIFY_WIN_SIG.md)). You might want to move the downloaded file into a separate folder of your choice, so that you can find it more easily in the future.
+If on startup you get an error message about a missing dll, you need to install the Visual C++ 2013 runtime dependency. You can download it [HERE](https://www.microsoft.com/en-us/download/details.aspx?id=40784). Download and install the x86 version of that Visual C++ 2013 runtime.
 
-For TAILS: use debian32 version, and run the executable with `torify ./joinmarket-qt-debian32`. You can set the irc onion host in the settings tab.
+**TAILS:**<br>
+Use debian32 version, and run the executable with `torify ./joinmarket-qt-debian32`. To improve communication privacy a slightly bit more, you can set the irc connection to use the hidden IRC TOR service in the settings tab. This means to change the "host" in the "MESSAGING"-section from "irc.cyberguerrilla.org" to the hidden service name "6dvj6v5imhny3anf.onion" and the port from 6697 to 6698. The channel does not need to be changed.
 
-For WINDOWS: If on startup you get an error message about a missing dll, you need to install the Visual C++ 2013 runtime dependency.
- Do so by going to www.microsoft.com/en-us/download/details.aspx?id=40784 and clicking Download.
-Choose x86.
+**LINUX:**<br>
+No other files / setup should be needed. You might need to adjust file permissions via the command line with `chmod 755` on Linux.
+
 
 The github commits to the main repo, above, are signed. For the executables in the release, there are .asc gpg signatures provided; please check them!
 
@@ -29,7 +32,8 @@ My key (Adam Gibson, @AdamISZ on github, waxwing on reddit, btctalk, @waxwing__ 
 
 The gpg signature files for each binary should verify against the above key.
 
-**You can also use the [python source version](https://github.com/Joinmarket-Org/joinmarket/tree/gui)** ; just run `python joinmarket-qt.py`. However, this of course requires the same installation/dependencies as the console app.
+**Python source version:**<br>
+You can also use the [python source version](https://github.com/Joinmarket-Org/joinmarket/tree/gui) ; just run `python joinmarket-qt.py`. However, this of course requires the same installation/dependencies as the console app.
 
 **Contents**
 
